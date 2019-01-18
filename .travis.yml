@@ -18,3 +18,16 @@ after_success:
   - docker push devsuri/multi-nginx
   - docker push devsuri/multi-server
   - docker push devsuri/multi-worker
+
+#deploy:
+#  provider: elasticbeanstalk
+#  region:
+#  app:          #from elasticbeanstalk
+#  env:          #from elasticbeanstalk
+#  bucket_name:        #from S3 created bydefault for elasticbeanstalk app
+#  bucket_path:
+#  on:
+#    branch: master
+#  access_key_id: $AWS_ACCESS_KEY
+#  secret_access_key:
+#    secure: $AWS_SECRET_KEY
