@@ -12,7 +12,7 @@ after_success:
   - docker build -t devsuri/multi-client ./client
   - docker build -t devsuri/multi-nginx ./nginx
   - docker build -t devsuri/multi-server ./server
-  - docker build -t devsuri"/multi-worker ./worker
+  - docker build -t devsuri/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push devsuri/multi-client
   - docker push devsuri/multi-nginx
